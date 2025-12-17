@@ -1,14 +1,42 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>プロセカクリア状況</title>
     <script src="js/test.js"></script>
 </head>
+
 <body>
-    <h1>ユーザー選択</h1>
-    <a href="user.html" onclick="selectUser('r')">るん</a>
-    <a href="user.html" onclick="selectUser('a')">あち</a>
+    <div id="userSelectScreen">
+        <h1>ユーザー選択</h1>
+        <a href="#" onclick="selectUser('r')">るん</a>
+        <a href="#" onclick="selectUser('a')">あち</a>
+    </div>
+    <div id="menuScreen">
+        <h1>ユーザー : </h1>
+        <a href="#">収録曲リスト</a>
+        <a href="#">プレイ履歴</a>
+        <a href="#">プレイ統計</a>
+        <br>
+        <a href="#">戻る</a>
+    </div>
+    <div id="musicListScreen">
+        <h1>収録曲リスト</h1>
+        <br>
+        <a href="#">戻る</a>
+    </div>
+    <div id="playHistoryScreen">
+        <h1>プレイ履歴</h1>
+        <br>
+        <a href="#">戻る</a>
+    </div>
+    <div id="statsScreen">
+        <h1>プレイ統計</h1>
+        <br>
+        <a href="#">戻る</a>
+    </div>
 </body>
+
 </html>
