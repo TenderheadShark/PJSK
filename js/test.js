@@ -12,3 +12,18 @@ let musicNameMaster30 = musicMaster30.map(item => item.name);
 console.log(musicNameMaster30[5]);
 
 }
+let userIsRunn = false;
+let userIsAchi = false;
+const h1User = document.getElementById("userIs");
+function selectUser(user) {
+    if(user==='a') {
+        userIsAchi = true;
+        console.log('achi');
+    } else if(user==='r') {
+        userIsRunn = true;
+        console.log('runn');
+    } else {
+        console.log('error');
+    }
+}
+
