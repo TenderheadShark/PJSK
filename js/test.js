@@ -1,7 +1,7 @@
 console.log("test");
 loadJSON();
 async function loadJSON(){
-let response = await fetch('./music_list.json');
+let response = await fetch('../music_list.json');
 let result = await response.json();
 console.log(result);
 let musicMaster30 = result.filter(music => music.master === 30);
