@@ -6,6 +6,8 @@ const statsScreen = document.getElementById("statsScreen");
 
 const displayUser = document.getElementById("displayUser");
 
+const playHistoryForm = document.getElementById("playHistoryForm");
+
 const difficultySelector = document.getElementById("difficultySelector");
 const levelSelector = document.getElementById("levelSelector");
 const musicSelector = document.getElementById("musicSelector");
@@ -25,7 +27,7 @@ loadJSON();
 async function loadJSON() {
     let response = await fetch('../music_list.json');
     musicList = await response.json();
-    console.log(musicList);
+    // console.log(musicList);
 }
 
 userSelectScreen.style.display = 'block';

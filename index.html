@@ -32,7 +32,7 @@
     </div>
     <div id="playHistoryScreen">
         <h1>プレイ履歴</h1>
-        <form action="">
+        <form action="" id="playHistoryForm">
             <select name="difficulty" id="difficultySelector" onchange="difficultyChanged()" required>
                 <option value="" selected disabled>難易度</option>
                 <option value="Easy">Easy</option>
@@ -59,6 +59,8 @@
                 <option value="" selected disabled>曲名</option>
             </select>
             <input type="text" name="result" id="resultInput" placeholder="0-0-0-0" required>
+            <label for="liveFailed">ライブ失敗</label>
+            <input type="checkbox" name="liveFailed" id="failedCheck">
             <input type="submit" value="送信">
         </form>
         <br>
