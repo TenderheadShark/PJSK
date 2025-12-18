@@ -5,36 +5,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>プロセカクリア状況</title>
+    <script src="js/init.js" defer></script>
+    <script src="js/userSelect.js" defer></script>
+    <script src="js/menu.js" defer></script>
 </head>
 
 <body>
     <div id="userSelectScreen">
         <h1>ユーザー選択</h1>
-        <button>るん</button>
-        <button>あち</button>
+        <button class="userSelectButton" onclick="selectUser(1)">るん</button>
+        <button class="userSelectButton" onclick="selectUser(2)">あち</button>
     </div>
     <div id="menuScreen">
-        <h1>ユーザー : </h1>
-        <button>収録曲リスト</button>
-        <button>プレイ履歴</button>
-        <button>プレイ統計</button>
+        <h1 id="displayUser">ユーザー : </h1>
+        <button onclick="toList()">収録曲リスト</button>
+        <button onclick="toHistory()">プレイ履歴</button>
+        <button onclick="toStats()">プレイ統計</button>
         <br>
-        <button>戻る</button>
+        <button onclick="toUserSelect()">戻る</button>
     </div>
     <div id="musicListScreen">
         <h1>収録曲リスト</h1>
         <br>
-        <button>戻る</button>
+        <button onclick="toMenu()">戻る</button>
     </div>
     <div id="playHistoryScreen">
         <h1>プレイ履歴</h1>
         <br>
-        <button>戻る</button>
+        <button onclick="toMenu()">戻る</button>
     </div>
     <div id="statsScreen">
         <h1>プレイ統計</h1>
         <br>
-        <button>戻る</button>
+        <button onclick="toMenu()">戻る</button>
     </div>
 </body>
 
