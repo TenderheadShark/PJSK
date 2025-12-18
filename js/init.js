@@ -25,7 +25,7 @@ let appendLevels = [24,25,26,27,28,29,30,31,32,33,34,35,36,37,38];
 let musicList = {};
 loadJSON();
 async function loadJSON() {
-    let response = await fetch('../music_list.json');
+    let response = await fetch('https://tenderheadshark.github.io/PJSK/music_list.json');
     musicList = await response.json();
     // console.log(musicList);
 }
