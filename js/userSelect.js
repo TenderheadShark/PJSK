@@ -12,7 +12,7 @@ function toMenu() {
             displayUser.textContent = "ユーザー : あち";
             break;
         default:
-            console.error("Invalid UserID.");
+            console.error("Invalid UserID");
             break;
     }
     userSelectScreen.style.display = 'none';

@@ -8,6 +8,7 @@
     <script src="js/init.js" defer></script>
     <script src="js/userSelect.js" defer></script>
     <script src="js/menu.js" defer></script>
+    <script src="js/history.js" defer></script>
 </head>
 
 <body>
@@ -31,6 +32,35 @@
     </div>
     <div id="playHistoryScreen">
         <h1>プレイ履歴</h1>
+        <form action="">
+            <select name="difficulty" id="difficultySelector" onchange="difficultyChanged()" required>
+                <option value="" selected disabled>難易度</option>
+                <option value="Easy">Easy</option>
+                <option value="Normal">Normal</option>
+                <option value="Hard">Hard</option>
+                <option value="Expert">Expert</option>
+                <option value="Master">Master</option>
+                <option value="Append">Append</option>
+            </select>
+            <select name="level" id="levelSelector" required onchange="levelChanged()">
+                <option value="" selected disabled>レベル</option>
+            </select>
+            <select name="unit" id="unitSelector" required onchange="unitChanged()">
+                <option value="" selected disabled>ユニット</option>
+                <option value="0_VS">VirtualSinger</option>
+                <option value="1_L/n">Leo/need</option>
+                <option value="2_MMJ">MORE MORE JUMP !</option>
+                <option value="3_VBS">Vivid BAD SQUAD</option>
+                <option value="4_WxS">ワンダーランズ×ショウタイム</option>
+                <option value="5_25">25時、ナイトコードで。</option>
+                <option value="9_oth">その他</option>
+            </select>
+            <select name="name" id="musicSelector" required onchange="musicChanged()">
+                <option value="" selected disabled>曲名</option>
+            </select>
+            <input type="text" name="result" id="resultInput" placeholder="0-0-0-0" required>
+            <input type="submit" value="送信">
+        </form>
         <br>
         <button onclick="toMenu()">戻る</button>
     </div>
