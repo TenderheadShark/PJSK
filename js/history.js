@@ -152,6 +152,13 @@ async function postData(data) {
         const response = await fetch(baseURL, options);
         const data = await response.json();
         console.log(data);
+        if(data.result === 'OK'){
+            alert("投稿が完了しました");
+        } else if(data.result === 'ERROR'){
+            alert("投稿に失敗しました");
+        } else {
+            alert("不明なエラー");
+        }
         
     } catch (error) {
         // console.error("Error:", error);
