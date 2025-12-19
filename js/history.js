@@ -1,8 +1,3 @@
-let difficulty = "";
-let level = 0;
-let unit = "";
-let music = "";
-
 function difficultyChanged() {
     difficulty = difficultySelector.value;
     level = 0;
@@ -112,30 +107,29 @@ function musicSelectorContent() {
 }
 
 function musicChanged() {
-    music = musicSelector.value;
-    console.log(music);
+    musicID = parseInt(musicSelector.value);
+    console.log(musicID);
 }
 
-playHistoryForm.addEventListener('submit', function(event) {
+playHistoryForm.addEventListener('submit', function (event) {
     event.preventDefault();
 
-    const musicID = parseInt(musicSelector.value);
-    const musicName = musicList[musicID-1].name;
+    const musicName = musicList[musicID - 1].name;
 
-    
     const liveFailed = failedCheck.checked;
+
     const formObject = {
-        difficulty: difficultySelector.value,
-        level: parseInt(levelSelector.value),
+        difficulty: difficulty,
+        level: level,
         musicName: musicName,
         musicID: musicID,
         result: resultInput.value,
         liveFailed: liveFailed
     };
     console.log(formObject);
-    
+
     postData(formObject);
-    alert('送信しました');
+    resetForm();
 });
 
 async function postData(data) {
@@ -148,14 +142,14 @@ async function postData(data) {
     };
 
     console.log(options);
-    
-    try{
+
+    try {
         const response = await fetch(baseURL, options);
         const data = await response.json();
         console.log(data);
-        if(data.result === 'OK'){
+        if (data.result === 'OK') {
             alert("投稿が完了しました");
-        } else if(data.result === 'ERROR'){
+        } else if (data.result === 'ERROR') {
             alert("投稿に失敗しました");
         } else {
             alert("不明なエラーが発生しました");
@@ -164,4 +158,17 @@ async function postData(data) {
         // console.error("Error:", error);
         alert("エラーが発生しました");
     }
+}
+
+function resetForm() {
+    difficulty = "";
+    level = 0;
+    unit = "";
+    musicID = 0;
+
+    difficultySelector.selectedIndex = 0;
+    levelSelector.selectedIndex = 0;
+    unitSelector.selectedIndex = 0;
+    musicSelector.selectedIndex = 0;
+    resultInput.value = "";
 }

@@ -21,6 +21,11 @@ const baseURLforUser1 = 'https://script.google.com/macros/s/AKfycbwwuLHMVhXmxtpZ
 const baseURLforUser2 = 'https://script.google.com/macros/s/AKfycbxMYaY3olK6cz8PY518yjXIu7gR8HVNNSHoAktOZDDlC2QB9wPKwuGUGvM2gdGhTI_WrQ/exec';
 let baseURL = '';
 
+let difficulty = "";
+let level = 0;
+let unit = "";
+let musicID = 0;
+
 let easyLevels = [5,6,7,8,9,10];
 let normalLevels = [10,11,12,13,14,15,16];
 let hardLevels = [15,16,17,18,19,20,21,22,23,24,25];
