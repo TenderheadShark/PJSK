@@ -6200,7 +6200,7 @@
 		"hard": 18,
 		"expert": 24,
 		"master": 29,
-		"append": "",
+		"append": 29,
 		"time": "2:10",
 		"bpm": 120
 	},
