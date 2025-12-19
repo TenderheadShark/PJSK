@@ -171,4 +171,5 @@ function resetForm() {
     unitSelector.selectedIndex = 0;
     musicSelector.selectedIndex = 0;
     resultInput.value = "";
+    failedCheck.checked = false;
 }
