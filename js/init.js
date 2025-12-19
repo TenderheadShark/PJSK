@@ -12,8 +12,14 @@ const difficultySelector = document.getElementById("difficultySelector");
 const levelSelector = document.getElementById("levelSelector");
 const musicSelector = document.getElementById("musicSelector");
 const unitSelector = document.getElementById("unitSelector");
+const resultInput = document.getElementById("resultInput");
+const failedCheck = document.getElementById("failedCheck");
 
 let userID = 1; //1:るん 2:あち
+
+const baseURLforUser1 = 'https://script.google.com/macros/s/AKfycbwwuLHMVhXmxtpZQemgeZLRmNxG7aF2bNaN_bo2h4ywYUTH0fu-8w-26l0GVove3QHk/exec';
+const baseURLforUser2 = 'https://script.google.com/macros/s/AKfycbxMYaY3olK6cz8PY518yjXIu7gR8HVNNSHoAktOZDDlC2QB9wPKwuGUGvM2gdGhTI_WrQ/exec';
+let baseURL = '';
 
 let easyLevels = [5,6,7,8,9,10];
 let normalLevels = [10,11,12,13,14,15,16];

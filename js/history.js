@@ -104,7 +104,7 @@ function musicSelectorContent() {
 
         for (let i = 0; i < filteredList.length; i++) {
             let op = document.createElement('option');
-            op.setAttribute('value', filteredList[i].name);
+            op.setAttribute('value', filteredList[i].id);
             op.textContent = filteredList[i].name;
             musicSelector.appendChild(op);
         }
@@ -116,3 +116,44 @@ function musicChanged() {
     console.log(music);
 }
 
+playHistoryForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const musicID = parseInt(musicSelector.value);
+    const musicName = musicList[musicID-1].name;
+
+    
+    const liveFailed = failedCheck.checked;
+    const formObject = {
+        difficulty: difficultySelector.value,
+        level: parseInt(levelSelector.value),
+        musicName: musicName,
+        musicID: musicID,
+        result: resultInput.value,
+        liveFailed: liveFailed
+    };
+    console.log(formObject);
+    
+    postData(formObject);
+});
+
+async function postData(data) {
+    const options = {
+        method: "POST",
+        headers: {
+            "Content-Type": 'text/plain',
+        },
+        body: JSON.stringify(data),
+    };
+
+    console.log(options);
+    
+    try{
+        const response = await fetch(baseURL, options);
+        const data = await response.json();
+        console.log(data);
+        
+    } catch (error) {
+        // console.error("Error:", error);
+    }
+}

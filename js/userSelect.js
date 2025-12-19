@@ -7,9 +7,11 @@ function toMenu() {
     switch (userID) {
         case 1:
             displayUser.textContent = "ユーザー : るん";
+            baseURL = baseURLforUser1;
             break;
         case 2:
             displayUser.textContent = "ユーザー : あち";
+            baseURL = baseURLforUser2;
             break;
         default:
             console.error("Invalid UserID");
