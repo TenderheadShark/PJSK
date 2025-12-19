@@ -135,6 +135,7 @@ playHistoryForm.addEventListener('submit', function(event) {
     console.log(formObject);
     
     postData(formObject);
+    alert('送信しました');
 });
 
 async function postData(data) {
