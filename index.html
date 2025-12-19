@@ -55,12 +55,16 @@
                 <option value="5_25">25時、ナイトコードで。</option>
                 <option value="9_oth">その他</option>
             </select>
-            <select name="musicName" id="musicSelector" required onchange="musicChanged()">
+            <br>
+            <select name="musicName" id="musicSelector" required onchange="musicChanged()" style="width: 310px;">
                 <option value="" selected disabled>曲名</option>
             </select>
+            <br>
             <input type="text" name="result" id="resultInput" placeholder="0-0-0-0" required pattern="^(\d+-){3}\d+$">
+            <br>
             <label for="failedCheck">ライブ失敗</label>
             <input type="checkbox" name="liveFailed" id="failedCheck">
+            <br>
             <input type="submit" value="送信">
         </form>
         <br>
