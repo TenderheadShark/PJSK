@@ -157,10 +157,10 @@ async function postData(data) {
         } else if(data.result === 'ERROR'){
             alert("投稿に失敗しました");
         } else {
-            alert("不明なエラー");
+            alert("不明なエラーが発生しました");
         }
-        
     } catch (error) {
         // console.error("Error:", error);
+        alert("エラーが発生しました");
     }
 }
