@@ -10402,5 +10402,22 @@
 		"append": "",
 		"time": "2:10",
 		"bpm": 128
+	},
+	{
+		"id": 613,
+		"default": 10219,
+		"type": "公",
+		"name": "ドリーム・キス",
+		"furigana": "どりーむきす",
+		"url": "https://pjsekai.com/?f2dc4b851c",
+		"unit": "0_VS",
+		"easy": 5,
+		"normal": 11,
+		"hard": 17,
+		"expert": 24,
+		"master": 29,
+		"append": "",
+		"time": "TBC",
+		"bpm": 117
 	}
 ]
