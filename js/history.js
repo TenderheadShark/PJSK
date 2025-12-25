@@ -180,10 +180,7 @@ async function loadHistoryList() {
     historyNotFound.style.display = 'none';
     historyTable.style.display = 'none';
 
-    const fetchURL = baseURL + '?action=history';
-    const response = await fetch(fetchURL);
-    const result = await response.json();
-    console.log(result);
+    const result = await getData('history');
 
     if(result[0][1] == undefined) {
         historyLoading.style.display = 'none';

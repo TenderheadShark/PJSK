@@ -2,10 +2,7 @@ async function loadMusicList() {
     musicListLoading.style.display = 'block';
     musicListTable.style.display = 'none';
 
-    const fetchURL = baseURL + '?action=list';
-    const response = await fetch(fetchURL);
-    const result = await response.json();
-    console.log(result);
+    const result = await getData('list');
 
     while(musicListTableBody.firstChild) {
         musicListTableBody.removeChild(musicListTableBody.firstChild);

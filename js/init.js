@@ -60,3 +60,10 @@ musicListTable.style.display = 'none';
 
 historyNotFound.style.display = 'none';
 historyTable.style.display = 'none';
+
+async function getData (action) {
+    const fetchURL = baseURL + '?action=' + action;
+    const response = await fetch(fetchURL);
+    const result = await response.json();
+    return result;
+}
