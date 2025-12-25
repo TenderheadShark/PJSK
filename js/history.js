@@ -174,7 +174,7 @@ async function loadHistoryList() {
 
     const result = await getData('history');
 
-    if(result[0][1] == undefined) {
+    if (result[0][1] == undefined) {
         historyLoading.style.display = 'none';
         historyNotFound.style.display = 'block';
     } else {
@@ -182,7 +182,7 @@ async function loadHistoryList() {
             historyTableBody.removeChild(historyTableBody.firstChild);
         }
 
-        for(let i = 0; i < result.length; i++) {
+        for (let i = 0; i < result.length; i++) {
             const row = document.createElement('tr');
 
             const date = new Date(result[i][0]);
@@ -201,7 +201,7 @@ async function loadHistoryList() {
             const name = document.createElement('td');
             name.textContent = result[i][3];
             row.appendChild(name);
-            
+
             const great = document.createElement('td');
             great.textContent = result[i][4];
             row.appendChild(great);

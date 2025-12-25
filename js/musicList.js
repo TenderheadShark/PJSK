@@ -4,11 +4,11 @@ async function loadMusicList() {
 
     const result = await getData('list');
 
-    while(musicListTableBody.firstChild) {
+    while (musicListTableBody.firstChild) {
         musicListTableBody.removeChild(musicListTableBody.firstChild);
     }
 
-    for(let i = 0; i < musicList.length; i++) {
+    for (let i = 0; i < musicList.length; i++) {
         const row = document.createElement('tr');
 
         const id = document.createElement('td');
@@ -102,10 +102,10 @@ async function loadMusicList() {
 }
 
 function clearChecker(string) {
-    if(string === "") return '';
+    if (string === "") return '';
 
     const num = parseInt(string);
-    switch(num) {
+    switch (num) {
         case 0:
             return "";
         case 1:
