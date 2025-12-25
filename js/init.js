@@ -47,7 +47,6 @@ loadJSON();
 async function loadJSON() {
     let response = await fetch('https://tenderheadshark.github.io/PJSK/music_list.json');
     musicList = await response.json();
-    // console.log(musicList);
 }
 
 userSelectScreen.style.display = 'block';
