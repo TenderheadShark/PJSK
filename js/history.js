@@ -1,7 +1,6 @@
 function difficultyChanged() {
     difficulty = difficultySelector.value;
     level = 0;
-    console.log(difficulty);
     switch (difficulty) {
         case "Easy":
             levelSelectorContent(easyLevels);
@@ -50,13 +49,11 @@ function levelSelectorContent(levels) {
 
 function levelChanged() {
     level = parseInt(levelSelector.value);
-    console.log(level);
     musicSelectorContent();
 }
 
 function unitChanged() {
     unit = unitSelector.value;
-    console.log(unit);
     musicSelectorContent();
 }
 
@@ -108,7 +105,6 @@ function musicSelectorContent() {
 
 function musicChanged() {
     musicID = parseInt(musicSelector.value);
-    console.log(musicID);
 }
 
 playHistoryForm.addEventListener('submit', function (event) {
@@ -126,7 +122,6 @@ playHistoryForm.addEventListener('submit', function (event) {
         result: resultInput.value,
         liveFailed: liveFailed
     };
-    console.log(formObject);
 
     postData(formObject);
     resetForm();
@@ -141,12 +136,10 @@ async function postData(data) {
         body: JSON.stringify(data),
     };
 
-    console.log(options);
-
     try {
         const response = await fetch(baseURL, options);
         const data = await response.json();
-        console.log(data);
+
         if (data.result === 'OK') {
             alert("投稿が完了しました");
         } else if (data.result === 'ERROR') {
@@ -156,7 +149,6 @@ async function postData(data) {
         }
         loadHistoryList();
     } catch (error) {
-        // console.error("Error:", error);
         alert("エラーが発生しました");
     }
 }
