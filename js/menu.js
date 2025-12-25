@@ -6,6 +6,7 @@ function toList() {
 function toHistory() {
     menuScreen.style.display = 'none';
     playHistoryScreen.style.display = 'block';
+    loadHistoryList();
 }
 
 function toStats() {

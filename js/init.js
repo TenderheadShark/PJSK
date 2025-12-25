@@ -15,6 +15,11 @@ const unitSelector = document.getElementById("unitSelector");
 const resultInput = document.getElementById("resultInput");
 const failedCheck = document.getElementById("failedCheck");
 
+const historyLoading = document.getElementById("historyLoading");
+const historyNotFound = document.getElementById("historyNotFound");
+const historyTable = document.getElementById("historyTable");
+const historyTableBody = document.getElementById("historyTableBody");
+
 let userID = 1; //1:るん 2:あち
 
 const baseURLforUser1 = 'https://script.google.com/macros/s/AKfycbwwuLHMVhXmxtpZQemgeZLRmNxG7aF2bNaN_bo2h4ywYUTH0fu-8w-26l0GVove3QHk/exec';
@@ -46,4 +51,8 @@ menuScreen.style.display = 'none';
 musicListScreen.style.display = 'none';
 playHistoryScreen.style.display = 'none';
 statsScreen.style.display = 'none';
+
+historyNotFound.style.display = 'none';
+// historyTable.style.display = 'none';
+
 

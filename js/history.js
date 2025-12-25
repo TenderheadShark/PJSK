@@ -154,6 +154,7 @@ async function postData(data) {
         } else {
             alert("不明なエラーが発生しました");
         }
+        loadHistoryList();
     } catch (error) {
         // console.error("Error:", error);
         alert("エラーが発生しました");
@@ -172,4 +173,70 @@ function resetForm() {
     musicSelector.selectedIndex = 0;
     resultInput.value = "";
     failedCheck.checked = false;
+}
+
+async function loadHistoryList() {
+    historyLoading.style.display = 'block';
+    historyNotFound.style.display = 'none';
+    historyTable.style.display = 'none';
+
+    const fetchURL = baseURL + '?action=history';
+    const response = await fetch(fetchURL);
+    const result = await response.json();
+    console.log(result);
+
+    if(result[0][1] == undefined) {
+        historyLoading.style.display = 'none';
+        historyNotFound.style.display = 'block';
+    } else {
+        while (historyTableBody.firstChild) {
+            historyTableBody.removeChild(historyTableBody.firstChild);
+        }
+
+        for(let i = 0; i < result.length; i++) {
+            const row = document.createElement('tr');
+
+            const date = new Date(result[i][0]);
+            const time = document.createElement('td');
+            time.textContent = date.toLocaleString("ja-JP");
+            row.appendChild(time);
+
+            const difficulty = document.createElement('td');
+            difficulty.textContent = result[i][1];
+            row.appendChild(difficulty);
+
+            const level = document.createElement('td');
+            level.textContent = result[i][2];
+            row.appendChild(level);
+
+            const name = document.createElement('td');
+            name.textContent = result[i][3];
+            row.appendChild(name);
+            
+            const great = document.createElement('td');
+            great.textContent = result[i][4];
+            row.appendChild(great);
+
+            const good = document.createElement('td');
+            good.textContent = result[i][5];
+            row.appendChild(good);
+
+            const bad = document.createElement('td');
+            bad.textContent = result[i][6];
+            row.appendChild(bad);
+
+            const miss = document.createElement('td');
+            miss.textContent = result[i][7];
+            row.appendChild(miss);
+
+            const losePoints = document.createElement('td');
+            losePoints.textContent = result[i][8];
+            row.appendChild(losePoints);
+
+            historyTableBody.appendChild(row);
+        }
+
+        historyTable.style.display = 'block';
+        historyLoading.style.display = 'none';
+    }
 }

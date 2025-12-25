@@ -67,6 +67,31 @@
             <br>
             <input type="submit" value="送信">
         </form>
+        <div id="historyList">
+            <h2 id="historyLoading">プレイ履歴を読み込み中</h2>
+            <h2 id="historyNotFound">プレイ履歴がありません</h2>
+            <table id="historyTable">
+                <thead>
+                    <tr>
+                        <th rowspan="2">投稿時間</th>
+                        <th rowspan="2">難易度</th>
+                        <th rowspan="2">レベル</th>
+                        <th rowspan="2">曲名</th>
+                        <th colspan="5">リザルト</th>
+                    </tr>
+                    <tr>
+                        <th>Great</th>
+                        <th>Good</th>
+                        <th>Bad</th>
+                        <th>Miss</th>
+                        <th>失点</th>
+                    </tr>
+                </thead>
+                <tbody id="historyTableBody">
+
+                </tbody>
+            </table>
+        </div>
         <br>
         <button onclick="toMenu()">戻る</button>
     </div>
