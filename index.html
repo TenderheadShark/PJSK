@@ -8,6 +8,7 @@
     <script src="js/init.js" defer></script>
     <script src="js/userSelect.js" defer></script>
     <script src="js/menu.js" defer></script>
+    <script src="js/musicList.js" defer></script>
     <script src="js/history.js" defer></script>
 </head>
 
@@ -27,6 +28,64 @@
     </div>
     <div id="musicListScreen">
         <h1>収録曲リスト</h1>
+        <div>
+            <h2 id="musicListLoading">収録曲リストを読み込み中</h2>
+            <table id="musicListTable">
+                <colgroup>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col style="visibility: collapse;">
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th rowspan="2">収録順</th>
+                        <th rowspan="2">デフォルト順</th>
+                        <th rowspan="2">種別</th>
+                        <th rowspan="2">曲名</th>
+                        <th rowspan="2">読み</th>
+                        <th rowspan="2">ユニット</th>
+                        <th colspan="6">レベル</th>
+                        <th rowspan="2">時間</th>
+                        <th rowspan="2">BPM</th>
+                        <th colspan="6">クリア状況</th>
+                    </tr>
+                    <tr>
+                        <th>Easy</th>
+                        <th>Normal</th>
+                        <th>Hard</th>
+                        <th>Expert</th>
+                        <th>Master</th>
+                        <th>Append</th>
+                        <th>Easy</th>
+                        <th>Normal</th>
+                        <th>Hard</th>
+                        <th>Expert</th>
+                        <th>Master</th>
+                        <th>Append</th>
+                    </tr>
+                </thead>
+                <tbody id="musicListTableBody">
+
+                </tbody>
+            </table>
+        </div>
         <br>
         <button onclick="toMenu()">戻る</button>
     </div>

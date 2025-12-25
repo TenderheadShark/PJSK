@@ -15,6 +15,10 @@ const unitSelector = document.getElementById("unitSelector");
 const resultInput = document.getElementById("resultInput");
 const failedCheck = document.getElementById("failedCheck");
 
+const musicListTable = document.getElementById("musicListTable");
+const musicListLoading = document.getElementById("musicListLoading");
+const musicListTableBody = document.getElementById("musicListTableBody");
+
 const historyLoading = document.getElementById("historyLoading");
 const historyNotFound = document.getElementById("historyNotFound");
 const historyTable = document.getElementById("historyTable");
@@ -52,7 +56,7 @@ musicListScreen.style.display = 'none';
 playHistoryScreen.style.display = 'none';
 statsScreen.style.display = 'none';
 
+musicListTable.style.display = 'none';
+
 historyNotFound.style.display = 'none';
-// historyTable.style.display = 'none';
-
-
+historyTable.style.display = 'none';

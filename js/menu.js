@@ -1,6 +1,7 @@
 function toList() {
     menuScreen.style.display = 'none';
     musicListScreen.style.display = 'block';
+    loadMusicList();
 }
 
 function toHistory() {
