@@ -28,6 +28,7 @@
     </div>
     <div id="musicListScreen">
         <h1>収録曲リスト</h1>
+        <button onclick="toMenu()">戻る</button>
         <div>
             <h2 id="musicListLoading">収録曲リストを読み込み中</h2>
             <table id="musicListTable">
@@ -86,11 +87,11 @@
                 </tbody>
             </table>
         </div>
-        <br>
-        <button onclick="toMenu()">戻る</button>
     </div>
     <div id="playHistoryScreen">
         <h1>プレイ履歴</h1>
+        <button onclick="toMenu()">戻る</button>
+        <br>
         <form action="" id="playHistoryForm" method="POST">
             <select name="difficulty" id="difficultySelector" onchange="difficultyChanged()" required>
                 <option value="" selected disabled>難易度</option>
@@ -151,12 +152,9 @@
                 </tbody>
             </table>
         </div>
-        <br>
-        <button onclick="toMenu()">戻る</button>
     </div>
     <div id="statsScreen">
         <h1>プレイ統計</h1>
-        <br>
         <button onclick="toMenu()">戻る</button>
     </div>
 </body>
