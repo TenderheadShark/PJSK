@@ -100,6 +100,7 @@ async function loadMusicList() {
         musicListTableBody.appendChild(row);
     }
 
+    musicListLoading.style.display = 'none';
     musicListTable.style.display = 'block';
 }
 
