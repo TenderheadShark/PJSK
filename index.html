@@ -10,6 +10,7 @@
     <script src="js/menu.js" defer></script>
     <script src="js/musicList.js" defer></script>
     <script src="js/history.js" defer></script>
+    <script src="js/stats.js" defer></script>
 </head>
 
 <body>
@@ -156,6 +157,31 @@
     <div id="statsScreen">
         <h1>プレイ統計</h1>
         <button onclick="toMenu()">戻る</button>
+        <div>
+            <br>
+            <button>Easy</button>
+            <button>Normal</button>
+            <button>Hard</button>
+            <button>Expert</button>
+            <button>Master</button>
+            <button>Append</button>
+            <h2 id="statsLoading">プレイ統計を読み込み中</h2>
+            <table id="statsTable">
+                <thead>
+                    <th></th>
+                    <th>曲数</th>
+                    <th>クリア数</th>
+                    <th>FC数</th>
+                    <th>AP数</th>
+                    <th>クリア率</th>
+                    <th>FC率</th>
+                    <th>AP率</th>
+                </thead>
+                <tbody id="statsTableBody">
+
+                </tbody>
+            </table>
+        </div>
     </div>
 </body>
 

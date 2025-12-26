@@ -13,6 +13,7 @@ function toHistory() {
 function toStats() {
     menuScreen.style.display = 'none';
     statsScreen.style.display = 'block';
+    loadStats();
 }
 
 function toUserSelect() {
