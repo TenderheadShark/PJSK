@@ -159,16 +159,20 @@
         <button onclick="toMenu()">戻る</button>
         <div>
             <br>
-            <button>Easy</button>
-            <button>Normal</button>
-            <button>Hard</button>
-            <button>Expert</button>
-            <button>Master</button>
-            <button>Append</button>
+
             <h2 id="statsLoading">プレイ統計を読み込み中</h2>
+            <div id="statsButtons">
+                <button onclick="showStats(1)">Easy</button>
+                <button onclick="showStats(2)">Normal</button>
+                <button onclick="showStats(3)">Hard</button>
+                <button onclick="showStats(4)">Expert</button>
+                <button onclick="showStats(5)">Master</button>
+                <button onclick="showStats(6)">Append</button>
+            </div>
+
             <table id="statsTable">
                 <thead>
-                    <th></th>
+                    <th>レベル</th>
                     <th>曲数</th>
                     <th>クリア数</th>
                     <th>FC数</th>

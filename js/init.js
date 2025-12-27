@@ -27,6 +27,7 @@ const historyTableBody = document.getElementById("historyTableBody");
 const statsTable = document.getElementById("statsTable");
 const statsTableBody = document.getElementById("statsTableBody");
 const statsLoading = document.getElementById("statsLoading");
+const statsButtons = document.getElementById("statsButtons");
 
 let userID = 1; //1:るん 2:あち
 
@@ -46,6 +47,13 @@ let expertLevels = [21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32];
 let masterLevels = [25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37];
 let appendLevels = [24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38];
 
+let easyStats = [];
+let normalStats = [];
+let hardStats = [];
+let expertStats = [];
+let masterStats = [];
+let appendStats = [];
+
 let musicList = {};
 loadJSON();
 async function loadJSON() {
@@ -64,7 +72,8 @@ musicListTable.style.display = 'none';
 historyNotFound.style.display = 'none';
 historyTable.style.display = 'none';
 
-// statsTable.style.display = 'none';
+statsTable.style.display = 'none';
+statsButtons.style.display = 'none';
 
 async function getData(action) {
     const fetchURL = baseURL + '?action=' + action;
