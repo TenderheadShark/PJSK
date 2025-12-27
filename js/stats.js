@@ -1,4 +1,15 @@
 async function loadStats() {
+    statsTable.style.display = 'none';
+    statsButtons.style.display = 'none';
+    statsLoading.style.display = 'block';
+
+    easyStats = [];
+    normalStats = [];
+    hardStats = [];
+    expertStats = [];
+    masterStats = [];
+    appendStats = [];
+
     const result = await getData('list');
 
     let easyHeader = [];
