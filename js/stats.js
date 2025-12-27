@@ -1,84 +1,144 @@
 async function loadStats() {
     const result = await getData('list');
 
-    let easyHeader = ['Easy', musicList.length, countChecker(result, 2, 1, 0), countChecker(result, 2, 2, 0), countChecker(result, 2, 3, 0)];
+    let easyHeader = [];
+    easyHeader.push('Easy');
+    easyHeader.push(musicList.length);
+    easyHeader.push(countChecker(result, 2, 1, 0));
+    easyHeader.push(countChecker(result, 2, 2, 0));
+    easyHeader.push(countChecker(result, 2, 3, 0));
     easyHeader.push(calcPercentage(easyHeader[1], easyHeader[2]));
     easyHeader.push(calcPercentage(easyHeader[1], easyHeader[3]));
     easyHeader.push(calcPercentage(easyHeader[1], easyHeader[4]));
     easyStats.push(easyHeader);
 
     for (let i = 0; i < easyLevels.length; i++) {
-        let row = [easyLevels[i], countMusic('easy', easyLevels[i]), countChecker(result, 2, 1, easyLevels[i]), countChecker(result, 2, 2, easyLevels[i]), countChecker(result, 2, 3, easyLevels[i])];
+        let row = [];
+        row.push(easyLevels[i]);
+        row.push(countMusic('easy', easyLevels[i]));
+        row.push(countChecker(result, 2, 1, easyLevels[i]));
+        row.push(countChecker(result, 2, 2, easyLevels[i]));
+        row.push(countChecker(result, 2, 3, easyLevels[i]));
         row.push(calcPercentage(row[1], row[2]));
         row.push(calcPercentage(row[1], row[3]));
         row.push(calcPercentage(row[1], row[4]));
         easyStats.push(row);
     }
 
-    let normalHeader = ['Normal', musicList.length, countChecker(result, 3, 1, 0), countChecker(result, 3, 2, 0), countChecker(result, 3, 3, 0)];
+    let normalHeader = [];
+    normalHeader.push('Normal');
+    normalHeader.push(musicList.length);
+    normalHeader.push(countChecker(result, 3, 1, 0));
+    normalHeader.push(countChecker(result, 3, 2, 0));
+    normalHeader.push(countChecker(result, 3, 3, 0));
     normalHeader.push(calcPercentage(normalHeader[1], normalHeader[2]));
     normalHeader.push(calcPercentage(normalHeader[1], normalHeader[3]));
     normalHeader.push(calcPercentage(normalHeader[1], normalHeader[4]));
     normalStats.push(normalHeader);
 
     for (let i = 0; i < normalLevels.length; i++) {
-        let row = [normalLevels[i], countMusic('normal', normalLevels[i]), countChecker(result, 3, 1, normalLevels[i]), countChecker(result, 3, 2, normalLevels[i]), countChecker(result, 3, 3, normalLevels[i])];
+        let row = [];
+        row.push(normalLevels[i]);
+        row.push(countMusic('normal', normalLevels[i]));
+        row.push(countChecker(result, 3, 1, normalLevels[i]));
+        row.push(countChecker(result, 3, 2, normalLevels[i]));
+        row.push(countChecker(result, 3, 3, normalLevels[i]));
         row.push(calcPercentage(row[1], row[2]));
         row.push(calcPercentage(row[1], row[3]));
         row.push(calcPercentage(row[1], row[4]));
         normalStats.push(row);
     }
 
-    let hardHeader = ['Hard', musicList.length, countChecker(result, 4, 1, 0), countChecker(result, 4, 2, 0), countChecker(result, 4, 3, 0)];
+    let hardHeader = [];
+    hardHeader.push('Hard');
+    hardHeader.push(musicList.length);
+    hardHeader.push(countChecker(result, 4, 1, 0));
+    hardHeader.push(countChecker(result, 4, 2, 0));
+    hardHeader.push(countChecker(result, 4, 3, 0));
     hardHeader.push(calcPercentage(hardHeader[1], hardHeader[2]));
     hardHeader.push(calcPercentage(hardHeader[1], hardHeader[3]));
     hardHeader.push(calcPercentage(hardHeader[1], hardHeader[4]));
     hardStats.push(hardHeader);
 
     for (let i = 0; i < hardLevels.length; i++) {
-        let row = [hardLevels[i], countMusic('hard', hardLevels[i]), countChecker(result, 4, 1, hardLevels[i]), countChecker(result, 4, 2, hardLevels[i]), countChecker(result, 4, 3, hardLevels[i])];
+        let row = [];
+        row.push(hardLevels[i]);
+        row.push(countMusic('hard', hardLevels[i]));
+        row.push(countChecker(result, 4, 1, hardLevels[i]));
+        row.push(countChecker(result, 4, 2, hardLevels[i]));
+        row.push(countChecker(result, 4, 3, hardLevels[i]));
         row.push(calcPercentage(row[1], row[2]));
         row.push(calcPercentage(row[1], row[3]));
         row.push(calcPercentage(row[1], row[4]));
         hardStats.push(row);
     }
 
-    let expertHeader = ['Expert', musicList.length, countChecker(result, 5, 1, 0), countChecker(result, 5, 2, 0), countChecker(result, 5, 3, 0)];
+    let expertHeader = [];
+    expertHeader.push('Expert');
+    expertHeader.push(musicList.length);
+    expertHeader.push(countChecker(result, 5, 1, 0));
+    expertHeader.push(countChecker(result, 5, 2, 0));
+    expertHeader.push(countChecker(result, 5, 3, 0));
     expertHeader.push(calcPercentage(expertHeader[1], expertHeader[2]));
     expertHeader.push(calcPercentage(expertHeader[1], expertHeader[3]));
     expertHeader.push(calcPercentage(expertHeader[1], expertHeader[4]));
     expertStats.push(expertHeader);
 
     for (let i = 0; i < expertLevels.length; i++) {
-        let row = [expertLevels[i], countMusic('expert', expertLevels[i]), countChecker(result, 5, 1, expertLevels[i]), countChecker(result, 5, 2, expertLevels[i]), countChecker(result, 5, 3, expertLevels[i])];
+        let row = [];
+        row.push(expertLevels[i]);
+        row.push(countMusic('expert', expertLevels[i]));
+        row.push(countChecker(result, 5, 1, expertLevels[i]));
+        row.push(countChecker(result, 5, 2, expertLevels[i]));
+        row.push(countChecker(result, 5, 3, expertLevels[i]));
         row.push(calcPercentage(row[1], row[2]));
         row.push(calcPercentage(row[1], row[3]));
         row.push(calcPercentage(row[1], row[4]));
         expertStats.push(row);
     }
 
-    let masterHeader = ['Master', musicList.length, countChecker(result, 6, 1, 0), countChecker(result, 6, 2, 0), countChecker(result, 6, 3, 0)];
+    let masterHeader = [];
+    masterHeader.push('Master');
+    masterHeader.push(musicList.length);
+    masterHeader.push(countChecker(result, 6, 1, 0));
+    masterHeader.push(countChecker(result, 6, 2, 0));
+    masterHeader.push(countChecker(result, 6, 3, 0));
     masterHeader.push(calcPercentage(masterHeader[1], masterHeader[2]));
     masterHeader.push(calcPercentage(masterHeader[1], masterHeader[3]));
     masterHeader.push(calcPercentage(masterHeader[1], masterHeader[4]));
     masterStats.push(masterHeader);
 
     for (let i = 0; i < masterLevels.length; i++) {
-        let row = [masterLevels[i], countMusic('master', masterLevels[i]), countChecker(result, 6, 1, masterLevels[i]), countChecker(result, 6, 2, masterLevels[i]), countChecker(result, 6, 3, masterLevels[i])];
+        let row = [];
+        row.push(masterLevels[i]);
+        row.push(countMusic('master', masterLevels[i]));
+        row.push(countChecker(result, 6, 1, masterLevels[i]));
+        row.push(countChecker(result, 6, 2, masterLevels[i]));
+        row.push(countChecker(result, 6, 3, masterLevels[i]));
         row.push(calcPercentage(row[1], row[2]));
         row.push(calcPercentage(row[1], row[3]));
         row.push(calcPercentage(row[1], row[4]));
         masterStats.push(row);
     }
 
-    let appendHeader = ['Append', appendCount(), countChecker(result, 7, 1, 0), countChecker(result, 7, 2, 0), countChecker(result, 7, 3, 0)];
+    let appendHeader = [];
+    appendHeader.push('Append');
+    appendHeader.push(appendCount());
+    appendHeader.push(countChecker(result, 7, 1, 0));
+    appendHeader.push(countChecker(result, 7, 2, 0));
+    appendHeader.push(countChecker(result, 7, 3, 0));
     appendHeader.push(calcPercentage(appendHeader[1], appendHeader[2]));
     appendHeader.push(calcPercentage(appendHeader[1], appendHeader[3]));
     appendHeader.push(calcPercentage(appendHeader[1], appendHeader[4]));
     appendStats.push(appendHeader);
 
     for (let i = 0; i < appendLevels.length; i++) {
-        let row = [appendLevels[i], countMusic('append', appendLevels[i]), countChecker(result, 7, 1, appendLevels[i]), countChecker(result, 7, 2, appendLevels[i]), countChecker(result, 7, 3, appendLevels[i])];
+        let row = [];
+        row.push(appendLevels[i]);
+        row.push(countMusic('append', appendLevels[i]));
+        row.push(countChecker(result, 7, 1, appendLevels[i]));
+        row.push(countChecker(result, 7, 2, appendLevels[i]));
+        row.push(countChecker(result, 7, 3, appendLevels[i]));
         row.push(calcPercentage(row[1], row[2]));
         row.push(calcPercentage(row[1], row[3]));
         row.push(calcPercentage(row[1], row[4]));
