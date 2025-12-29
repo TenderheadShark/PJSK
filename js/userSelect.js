@@ -6,11 +6,11 @@ function selectUser(id) {
 function toMenu() {
     switch (userID) {
         case 1:
-            displayUser.textContent = "ユーザー : るん";
+            displayUser.textContent = "ユーザーID : 1";
             baseURL = baseURLforUser1;
             break;
         case 2:
-            displayUser.textContent = "ユーザー : あち";
+            displayUser.textContent = "ユーザーID : 2";
             baseURL = baseURLforUser2;
             break;
         default:
