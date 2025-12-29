@@ -182,7 +182,7 @@ async function loadHistoryList() {
             historyTableBody.removeChild(historyTableBody.firstChild);
         }
 
-        for (let i = 0; i < result.length; i++) {
+        for (let i = result.length - 1; i >= 0; i--) {
             const row = document.createElement('tr');
 
             const date = new Date(result[i][0]);
