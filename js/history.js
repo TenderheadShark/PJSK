@@ -187,7 +187,14 @@ async function loadHistoryList() {
 
             const date = new Date(result[i][0]);
             const time = document.createElement('td');
-            time.textContent = date.toLocaleString("ja-JP");
+            time.textContent = date.toLocaleString("ja-JP", {
+                year: 'numeric',
+                month: '2-digit',
+                day: '2-digit',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit'
+            });
             row.appendChild(time);
 
             const difficulty = document.createElement('td');
