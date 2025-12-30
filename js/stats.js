@@ -231,9 +231,6 @@ function countChecker(list, index, num, level) {
     for (let i = 0; i < list.length; i++) {
         if ((parseInt(list[i][index]) >= num) && (level === 0 || parseInt(musicListJSON[i][indexString]) === level)) count++;
     }
-    // list.forEach(element => {
-    //     if (parseInt(element[index]) >= num) count++;
-    // });
     return count;
 }
 
