@@ -52,10 +52,6 @@ table {
     background-color: gray !important;
 }
 
-th {
-    text-align: center;
-}
-
 .rubyCol {
     visibility: collapse;
 }
@@ -70,6 +66,30 @@ th {
 
 #musicListTable .levels th {
     width: 60px;
+}
+
+#musicListTable .clearEasy {
+    text-align: center;
+}
+
+#musicListTable .clearNormal {
+    text-align: center;
+}
+
+#musicListTable .clearHard {
+    text-align: center;
+}
+
+#musicListTable .clearExpert {
+    text-align: center;
+}
+
+#musicListTable .clearMaster {
+    text-align: center;
+}
+
+#musicListTable .clearAppend {
+    text-align: center;
 }
 
 .sort.desc:after {
@@ -92,4 +112,8 @@ th {
 .rubyHeader {
     visibility: hidden;
     border: none !important;
+}
+
+#searchBox {
+    margin-top: 1em;
 }

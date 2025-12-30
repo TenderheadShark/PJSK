@@ -1,6 +1,7 @@
 async function loadMusicList() {
     musicListLoading.style.display = 'block';
     musicListTable.style.display = 'none';
+    searchBox.style.display = 'none';
 
     const result = await getData('list');
 
@@ -125,6 +126,7 @@ async function loadMusicList() {
 
     musicListLoading.style.display = 'none';
     musicListTable.style.display = 'block';
+    searchBox.style.display = 'block';
 
     musicList = new List('musicListScreen', {
         valueNames: ['id', 'default', 'type', 'name', 'ruby', 'unit', 'levelEasy', 'levelNormal', 'levelHard', 'levelExpert', 'levelMaster', 'levelAppend', 'time', 'bpm', 'clearEasy', 'clearNormal', 'clearHard', 'clearExpert', 'clearMaster', 'clearAppend'],

@@ -6,6 +6,17 @@ const statsScreen = document.getElementById("statsScreen");
 
 const displayUser = document.getElementById("displayUser");
 
+const musicListTable = document.getElementById("musicListTable");
+const musicListLoading = document.getElementById("musicListLoading");
+const musicListTableBody = document.getElementById("musicListTableBody");
+const searchBox = document.getElementById("searchBox");
+
+const historyLoading = document.getElementById("historyLoading");
+const historyNotFound = document.getElementById("historyNotFound");
+const historyTable = document.getElementById("historyTable");
+const historyTableBody = document.getElementById("historyTableBody");
+const historyPaginationList = document.getElementById("historyPaginationList");
+
 const playHistoryForm = document.getElementById("playHistoryForm");
 
 const difficultySelector = document.getElementById("difficultySelector");
@@ -14,16 +25,6 @@ const musicSelector = document.getElementById("musicSelector");
 const unitSelector = document.getElementById("unitSelector");
 const resultInput = document.getElementById("resultInput");
 const failedCheck = document.getElementById("failedCheck");
-
-const musicListTable = document.getElementById("musicListTable");
-const musicListLoading = document.getElementById("musicListLoading");
-const musicListTableBody = document.getElementById("musicListTableBody");
-
-const historyLoading = document.getElementById("historyLoading");
-const historyNotFound = document.getElementById("historyNotFound");
-const historyTable = document.getElementById("historyTable");
-const historyTableBody = document.getElementById("historyTableBody");
-const historyPaginationList = document.getElementById("historyPaginationList");
 
 const statsTable = document.getElementById("statsTable");
 const statsTableBody = document.getElementById("statsTableBody");
@@ -69,6 +70,7 @@ playHistoryScreen.style.display = 'none';
 statsScreen.style.display = 'none';
 
 musicListTable.style.display = 'none';
+searchBox.style.display = 'none';
 
 historyNotFound.style.display = 'none';
 historyTable.style.display = 'none';
