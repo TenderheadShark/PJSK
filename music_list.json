@@ -3123,7 +3123,7 @@
 		"hard": 16,
 		"expert": 21,
 		"master": 26,
-		"append": "24",
+		"append": 24,
 		"time": "2:05",
 		"bpm": 75
 	},
