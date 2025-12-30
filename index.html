@@ -32,15 +32,17 @@
     <div id="musicListScreen">
         <h1>収録曲リスト</h1>
         <button onclick="toMenu()">戻る</button>
-        <div>
+        <br>
+        <div id="musicList">
             <h2 id="musicListLoading">収録曲リストを読み込み中</h2>
+            <input type="text" class="fuzzy-search" name="fuzzy-search">
             <table id="musicListTable">
                 <colgroup>
                     <col>
                     <col>
                     <col>
                     <col>
-                    <col style="visibility: collapse;">
+                    <col class="rubyCol">
                     <col>
                     <col>
                     <col>
@@ -59,33 +61,33 @@
                 </colgroup>
                 <thead>
                     <tr>
-                        <th rowspan="2">収録順</th>
-                        <th rowspan="2">デフォルト順</th>
-                        <th rowspan="2">種別</th>
-                        <th rowspan="2">曲名</th>
+                        <th rowspan="2" class="sort" data-sort="id">収録順</th>
+                        <th rowspan="2" class="sort" data-sort="default">デフォルト順</th>
+                        <th rowspan="2" class="sort" data-sort="type">種別</th>
+                        <th rowspan="2" class="sort" data-sort="ruby">曲名</th>
                         <th rowspan="2">読み</th>
-                        <th rowspan="2">ユニット</th>
+                        <th rowspan="2" class="sort" data-sort="unit">ユニット</th>
                         <th colspan="6">レベル</th>
-                        <th rowspan="2">時間</th>
-                        <th rowspan="2">BPM</th>
+                        <th rowspan="2" class="sort" data-sort="time">時間</th>
+                        <th rowspan="2" class="sort" data-sort="bpm">BPM</th>
                         <th colspan="6">クリア状況</th>
                     </tr>
-                    <tr>
-                        <th>Easy</th>
-                        <th>Normal</th>
-                        <th>Hard</th>
-                        <th>Expert</th>
-                        <th>Master</th>
-                        <th>Append</th>
-                        <th>Easy</th>
-                        <th>Normal</th>
-                        <th>Hard</th>
-                        <th>Expert</th>
-                        <th>Master</th>
-                        <th>Append</th>
+                    <tr class="levels">
+                        <th class="sort" data-sort="levelEasy">Easy</th>
+                        <th class="sort" data-sort="levelNormal">Normal</th>
+                        <th class="sort" data-sort="levelHard">Hard</th>
+                        <th class="sort" data-sort="levelExpert">Expert</th>
+                        <th class="sort" data-sort="levelMaster">Master</th>
+                        <th class="sort" data-sort="levelAppend">Append</th>
+                        <th class="sort" data-sort="clearEasy">Easy</th>
+                        <th class="sort" data-sort="clearNormal">Normal</th>
+                        <th class="sort" data-sort="clearHard">Hard</th>
+                        <th class="sort" data-sort="clearExpert">Expert</th>
+                        <th class="sort" data-sort="clearMaster">Master</th>
+                        <th class="sort" data-sort="clearAppend">Append</th>
                     </tr>
                 </thead>
-                <tbody id="musicListTableBody">
+                <tbody id="musicListTableBody" class="list">
 
                 </tbody>
             </table>

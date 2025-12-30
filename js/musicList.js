@@ -8,90 +8,116 @@ async function loadMusicList() {
         musicListTableBody.removeChild(musicListTableBody.firstChild);
     }
 
-    for (let i = 0; i < musicList.length; i++) {
+    for (let i = 0; i < musicListJSON.length; i++) {
         const row = document.createElement('tr');
 
         const id = document.createElement('td');
-        id.textContent = musicList[i].id;
+        id.textContent = musicListJSON[i].id;
+        id.setAttribute("class", "id");
         row.appendChild(id);
 
         const defaultNo = document.createElement('td');
-        defaultNo.textContent = musicList[i].default;
+        defaultNo.textContent = musicListJSON[i].default;
+        defaultNo.setAttribute("class", "default");
         row.appendChild(defaultNo);
 
         const type = document.createElement('td');
-        type.textContent = musicList[i].type;
+        type.textContent = musicListJSON[i].type;
+        type.setAttribute("class", "type");
         row.appendChild(type);
 
         const name = document.createElement('td');
         const nameText = document.createElement('a');
-        nameText.textContent = musicList[i].name;
-        nameText.setAttribute('href', musicList[i].url);
+        nameText.textContent = musicListJSON[i].name;
+        nameText.setAttribute('href', musicListJSON[i].url);
         name.appendChild(nameText);
+        name.setAttribute("class", "name");
         row.appendChild(name);
 
         const ruby = document.createElement('td');
-        ruby.textContent = musicList[i].furigana;
+        ruby.textContent = musicListJSON[i].furigana;
+        ruby.setAttribute("class", "ruby");
         row.appendChild(ruby);
 
         const unit = document.createElement('td');
-        unit.textContent = musicList[i].unit;
+        unit.textContent = musicListJSON[i].unit;
+        unit.setAttribute("class", "unit");
         row.appendChild(unit);
 
         const levelEasy = document.createElement('td');
-        levelEasy.textContent = musicList[i].easy;
+        levelEasy.textContent = musicListJSON[i].easy;
+        levelEasy.setAttribute("class", "levelEasy");
         row.appendChild(levelEasy);
 
         const levelNormal = document.createElement('td');
-        levelNormal.textContent = musicList[i].normal;
+        levelNormal.textContent = musicListJSON[i].normal;
+        levelNormal.setAttribute("class", "levelNormal");
         row.appendChild(levelNormal);
 
         const levelHard = document.createElement('td');
-        levelHard.textContent = musicList[i].hard;
+        levelHard.textContent = musicListJSON[i].hard;
+        levelHard.setAttribute("class", "levelHard");
         row.appendChild(levelHard);
 
         const levelExpert = document.createElement('td');
-        levelExpert.textContent = musicList[i].expert;
+        levelExpert.textContent = musicListJSON[i].expert;
+        levelExpert.setAttribute("class", "levelExpert");
         row.appendChild(levelExpert);
 
         const levelMaster = document.createElement('td');
-        levelMaster.textContent = musicList[i].master;
+        levelMaster.textContent = musicListJSON[i].master;
+        levelMaster.setAttribute("class", "levelMaster");
         row.appendChild(levelMaster);
 
         const levelAppend = document.createElement('td');
-        levelAppend.textContent = musicList[i].append;
+        levelAppend.textContent = musicListJSON[i].append;
+        levelAppend.setAttribute("class", "levelAppend");
         row.appendChild(levelAppend);
 
         const time = document.createElement('td');
-        time.textContent = musicList[i].time;
+        time.textContent = musicListJSON[i].time;
+        time.setAttribute("class", "time");
         row.appendChild(time);
 
         const bpm = document.createElement('td');
-        bpm.textContent = musicList[i].bpm;
+        bpm.textContent = musicListJSON[i].bpm;
+        bpm.setAttribute("class", "bpm");
         row.appendChild(bpm);
 
         const clearEasy = document.createElement('td');
         clearEasy.textContent = clearChecker(result[i][2]);
+        clearEasy.setAttribute("class", !clearChecker(result[i][2]) ? "black" : clearChecker(result[i][2]));
+        clearEasy.classList.add("clearEasy");
         row.appendChild(clearEasy);
 
         const clearNormal = document.createElement('td');
         clearNormal.textContent = clearChecker(result[i][3]);
+        clearNormal.setAttribute("class", !clearChecker(result[i][3]) ? "black" : clearChecker(result[i][3]));
+        clearNormal.classList.add("clearNormal");
         row.appendChild(clearNormal);
 
         const clearHard = document.createElement('td');
         clearHard.textContent = clearChecker(result[i][4]);
+        clearHard.setAttribute("class", !clearChecker(result[i][4]) ? "black" : clearChecker(result[i][4]));
+        clearHard.classList.add("clearHard");
         row.appendChild(clearHard);
 
         const clearExpert = document.createElement('td');
         clearExpert.textContent = clearChecker(result[i][5]);
+        clearExpert.setAttribute("class", !clearChecker(result[i][5]) ? "black" : clearChecker(result[i][5]));
+        clearExpert.classList.add("clearExpert");
         row.appendChild(clearExpert);
 
         const clearMaster = document.createElement('td');
         clearMaster.textContent = clearChecker(result[i][6]);
+        clearMaster.setAttribute("class", !clearChecker(result[i][6]) ? "black" : clearChecker(result[i][6]));
+        clearMaster.classList.add("clearMaster");
         row.appendChild(clearMaster);
 
         const clearAppend = document.createElement('td');
         clearAppend.textContent = clearChecker(result[i][7]);
+        clearAppend.setAttribute("class", !clearChecker(result[i][7]) ? "black" : clearChecker(result[i][7]));
+        clearAppend.classList.add("clearAppend");
         row.appendChild(clearAppend);
 
         musicListTableBody.appendChild(row);
@@ -99,6 +125,12 @@ async function loadMusicList() {
 
     musicListLoading.style.display = 'none';
     musicListTable.style.display = 'block';
+
+    musicList = new List('musicListScreen', {
+        valueNames: ['id', 'default', 'type', 'name', 'ruby', 'unit', 'levelEasy', 'levelNormal', 'levelHard', 'levelExpert', 'levelMaster', 'levelAppend', 'time', 'bpm', 'clearEasy', 'clearNormal', 'clearHard', 'clearExpert', 'clearMaster', 'clearAppend'],
+        sortFunction: customSort
+    });
+    musicList.sort('default', {order: 'asc'});
 }
 
 function clearChecker(string) {
@@ -115,4 +147,15 @@ function clearChecker(string) {
         case 3:
             return "AP";
     }
+}
+
+function customSort(itemA, itemB, options) {
+    let sortColumn = options.valueName;
+    let a = itemA.values()[sortColumn];
+    let b = itemB.values()[sortColumn];
+
+    return a.localeCompare(b, "ja-JP", {
+        numeric: true,
+        sensitivity: 'base',
+    });
 }

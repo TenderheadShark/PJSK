@@ -72,22 +72,22 @@ function musicSelectorContent() {
         let filteredList = {};
         switch (difficulty) {
             case "Easy":
-                filteredList = musicList.filter(music => music.easy === level && music.unit === unit);
+                filteredList = musicListJSON.filter(music => music.easy === level && music.unit === unit);
                 break;
             case "Normal":
-                filteredList = musicList.filter(music => music.normal === level && music.unit === unit);
+                filteredList = musicListJSON.filter(music => music.normal === level && music.unit === unit);
                 break;
             case "Hard":
-                filteredList = musicList.filter(music => music.hard === level && music.unit === unit);
+                filteredList = musicListJSON.filter(music => music.hard === level && music.unit === unit);
                 break;
             case "Expert":
-                filteredList = musicList.filter(music => music.expert === level && music.unit === unit);
+                filteredList = musicListJSON.filter(music => music.expert === level && music.unit === unit);
                 break;
             case "Master":
-                filteredList = musicList.filter(music => music.master === level && music.unit === unit);
+                filteredList = musicListJSON.filter(music => music.master === level && music.unit === unit);
                 break;
             case "Append":
-                filteredList = musicList.filter(music => music.append === level && music.unit === unit);
+                filteredList = musicListJSON.filter(music => music.append === level && music.unit === unit);
                 break;
             default:
                 console.error("Invalid difficulty");
@@ -110,7 +110,7 @@ function musicChanged() {
 playHistoryForm.addEventListener('submit', function (event) {
     event.preventDefault();
 
-    const musicName = musicList[musicID - 1].name;
+    const musicName = musicListJSON[musicID - 1].name;
 
     const liveFailed = failedCheck.checked;
 
@@ -172,11 +172,9 @@ async function loadHistoryList() {
     historyNotFound.style.display = 'none';
     historyTable.style.display = 'none';
 
-
             while (historyPaginationList.firstChild) {
             historyPaginationList.removeChild(historyPaginationList.firstChild);
         }
-
 
     const result = await getData('history');
 
@@ -188,14 +186,12 @@ async function loadHistoryList() {
             historyTableBody.removeChild(historyTableBody.firstChild);
         }
 
-
-
         for (let i = result.length - 1; i >= 0; i--) {
             const row = document.createElement('tr');
 
             const date = new Date(result[i][0]);
             const time = document.createElement('td');
-            time.setAttribute("class", "time");
+            time.setAttribute("class", "timeStamp");
             time.textContent = date.toLocaleString("ja-JP", {
                 year: 'numeric',
                 month: '2-digit',
@@ -253,7 +249,7 @@ async function loadHistoryList() {
         historyLoading.style.display = 'none';
 
         historyList = new List('historyList', {
-            valueNames: ["time", "difficulty", "level", "name", "great", "good", "bad", "miss", "losePoints"],
+            valueNames: ["timeStamp", "difficulty", "level", "name", "great", "good", "bad", "miss", "losePoints"],
             page: 50,
             pagination: {
                 paginationClass:'pagination',

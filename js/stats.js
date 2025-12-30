@@ -14,7 +14,7 @@ async function loadStats() {
 
     let easyHeader = [];
     easyHeader.push('Easy');
-    easyHeader.push(musicList.length);
+    easyHeader.push(musicListJSON.length);
     easyHeader.push(countChecker(result, 2, 1, 0));
     easyHeader.push(countChecker(result, 2, 2, 0));
     easyHeader.push(countChecker(result, 2, 3, 0));
@@ -38,7 +38,7 @@ async function loadStats() {
 
     let normalHeader = [];
     normalHeader.push('Normal');
-    normalHeader.push(musicList.length);
+    normalHeader.push(musicListJSON.length);
     normalHeader.push(countChecker(result, 3, 1, 0));
     normalHeader.push(countChecker(result, 3, 2, 0));
     normalHeader.push(countChecker(result, 3, 3, 0));
@@ -62,7 +62,7 @@ async function loadStats() {
 
     let hardHeader = [];
     hardHeader.push('Hard');
-    hardHeader.push(musicList.length);
+    hardHeader.push(musicListJSON.length);
     hardHeader.push(countChecker(result, 4, 1, 0));
     hardHeader.push(countChecker(result, 4, 2, 0));
     hardHeader.push(countChecker(result, 4, 3, 0));
@@ -86,7 +86,7 @@ async function loadStats() {
 
     let expertHeader = [];
     expertHeader.push('Expert');
-    expertHeader.push(musicList.length);
+    expertHeader.push(musicListJSON.length);
     expertHeader.push(countChecker(result, 5, 1, 0));
     expertHeader.push(countChecker(result, 5, 2, 0));
     expertHeader.push(countChecker(result, 5, 3, 0));
@@ -110,7 +110,7 @@ async function loadStats() {
 
     let masterHeader = [];
     masterHeader.push('Master');
-    masterHeader.push(musicList.length);
+    masterHeader.push(musicListJSON.length);
     masterHeader.push(countChecker(result, 6, 1, 0));
     masterHeader.push(countChecker(result, 6, 2, 0));
     masterHeader.push(countChecker(result, 6, 3, 0));
@@ -229,7 +229,7 @@ function countChecker(list, index, num, level) {
             indexString = 'append';
     }
     for (let i = 0; i < list.length; i++) {
-        if ((parseInt(list[i][index]) >= num) && (level === 0 || parseInt(musicList[i][indexString]) === level)) count++;
+        if ((parseInt(list[i][index]) >= num) && (level === 0 || parseInt(musicListJSON[i][indexString]) === level)) count++;
     }
     // list.forEach(element => {
     //     if (parseInt(element[index]) >= num) count++;
@@ -238,9 +238,9 @@ function countChecker(list, index, num, level) {
 }
 
 function appendCount() {
-    let count = musicList.length;
-    for (let i = 0; i < musicList.length; i++) {
-        if (musicList[i].append === "") count--;
+    let count = musicListJSON.length;
+    for (let i = 0; i < musicListJSON.length; i++) {
+        if (musicListJSON[i].append === "") count--;
     }
     return count;
 }
@@ -251,7 +251,7 @@ function calcPercentage(total, part) {
 
 function countMusic(index, level) {
     let count = 0;
-    musicList.forEach(element => {
+    musicListJSON.forEach(element => {
         if (parseInt(element[index]) === level) count++;
     });
     return count;

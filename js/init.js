@@ -55,11 +55,11 @@ let expertStats = [];
 let masterStats = [];
 let appendStats = [];
 
-let musicList = {};
+let musicListJSON = {};
 loadJSON();
 async function loadJSON() {
     let response = await fetch('https://tenderheadshark.github.io/PJSK/music_list.json');
-    musicList = await response.json();
+    musicListJSON = await response.json();
 }
 
 userSelectScreen.style.display = 'block';
@@ -84,3 +84,4 @@ async function getData(action) {
 }
 
 let historyList;
+let musicList;
