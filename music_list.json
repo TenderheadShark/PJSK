@@ -3123,7 +3123,7 @@
 		"hard": 16,
 		"expert": 21,
 		"master": 26,
-		"append": "",
+		"append": "24",
 		"time": "2:05",
 		"bpm": 75
 	},
@@ -10419,5 +10419,39 @@
 		"append": "",
 		"time": "2:00",
 		"bpm": 117
+	},
+	{
+		"id": 614,
+		"default": 22028,
+		"type": "書",
+		"name": "Polar Star",
+		"furigana": "ぽーらーすたー",
+		"url": "https://pjsekai.com/?Polar%20Star",
+		"unit": "2_MMJ",
+		"easy": 8,
+		"normal": 13,
+		"hard": 16,
+		"expert": 24,
+		"master": 31,
+		"append": "",
+		"time": "1:36",
+		"bpm": 180
+	},
+	{
+		"id": 615,
+		"default": 10220,
+		"type": "既",
+		"name": "ぼかろころしあむ",
+		"furigana": "ぼかろころしあむ",
+		"url": "https://pjsekai.com/?ebaed7d9ed",
+		"unit": "0_VS",
+		"easy": 6,
+		"normal": 12,
+		"hard": 18,
+		"expert": 25,
+		"master": 30,
+		"append": "",
+		"time": "2:05",
+		"bpm": 130
 	}
 ]
