@@ -82,3 +82,7 @@ th {
     text-align: left;
 }
 
+.ruby, .rubyHeader {
+    visibility: hidden;
+    border: none !important;
+}

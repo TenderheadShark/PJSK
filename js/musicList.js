@@ -34,11 +34,6 @@ async function loadMusicList() {
         name.setAttribute("class", "name");
         row.appendChild(name);
 
-        const ruby = document.createElement('td');
-        ruby.textContent = musicListJSON[i].furigana;
-        ruby.setAttribute("class", "ruby");
-        row.appendChild(ruby);
-
         const unit = document.createElement('td');
         unit.textContent = musicListJSON[i].unit;
         unit.setAttribute("class", "unit");
@@ -119,6 +114,11 @@ async function loadMusicList() {
         clearAppend.setAttribute("class", !clearChecker(result[i][7]) ? "black" : clearChecker(result[i][7]));
         clearAppend.classList.add("clearAppend");
         row.appendChild(clearAppend);
+
+        const ruby = document.createElement('td');
+        ruby.textContent = musicListJSON[i].furigana;
+        ruby.setAttribute("class", "ruby");
+        row.appendChild(ruby);
 
         musicListTableBody.appendChild(row);
     }
