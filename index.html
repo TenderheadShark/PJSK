@@ -5,12 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>プロセカクリア状況</title>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"></script>
     <script src="js/init.js" defer></script>
     <script src="js/userSelect.js" defer></script>
     <script src="js/menu.js" defer></script>
     <script src="js/musicList.js" defer></script>
     <script src="js/history.js" defer></script>
     <script src="js/stats.js" defer></script>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -131,6 +133,7 @@
         <div id="historyList">
             <h2 id="historyLoading">プレイ履歴を読み込み中</h2>
             <h2 id="historyNotFound">プレイ履歴がありません</h2>
+            <ul class="pagination" id="historyPaginationList"></ul>
             <table id="historyTable">
                 <thead>
                     <tr>
@@ -148,7 +151,7 @@
                         <th>失点</th>
                     </tr>
                 </thead>
-                <tbody id="historyTableBody">
+                <tbody id="historyTableBody" class="list">
 
                 </tbody>
             </table>

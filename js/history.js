@@ -172,6 +172,12 @@ async function loadHistoryList() {
     historyNotFound.style.display = 'none';
     historyTable.style.display = 'none';
 
+
+            while (historyPaginationList.firstChild) {
+            historyPaginationList.removeChild(historyPaginationList.firstChild);
+        }
+
+
     const result = await getData('history');
 
     if (result[0][1] == undefined) {
@@ -182,11 +188,14 @@ async function loadHistoryList() {
             historyTableBody.removeChild(historyTableBody.firstChild);
         }
 
+
+
         for (let i = result.length - 1; i >= 0; i--) {
             const row = document.createElement('tr');
 
             const date = new Date(result[i][0]);
             const time = document.createElement('td');
+            time.setAttribute("class", "time");
             time.textContent = date.toLocaleString("ja-JP", {
                 year: 'numeric',
                 month: '2-digit',
@@ -198,34 +207,42 @@ async function loadHistoryList() {
             row.appendChild(time);
 
             const difficulty = document.createElement('td');
+            difficulty.setAttribute("class", "difficulty");
             difficulty.textContent = result[i][1];
             row.appendChild(difficulty);
 
             const level = document.createElement('td');
+            level.setAttribute("class", "level");
             level.textContent = result[i][2];
             row.appendChild(level);
 
             const name = document.createElement('td');
+            name.setAttribute("class", "name");
             name.textContent = result[i][3];
             row.appendChild(name);
 
             const great = document.createElement('td');
+            great.setAttribute("class", "great");
             great.textContent = result[i][4];
             row.appendChild(great);
 
             const good = document.createElement('td');
+            good.setAttribute("class", "good");
             good.textContent = result[i][5];
             row.appendChild(good);
 
             const bad = document.createElement('td');
+            bad.setAttribute("class", "bad");
             bad.textContent = result[i][6];
             row.appendChild(bad);
 
             const miss = document.createElement('td');
+            miss.setAttribute("class", "miss");
             miss.textContent = result[i][7];
             row.appendChild(miss);
 
             const losePoints = document.createElement('td');
+            losePoints.setAttribute("class", "losePoints");
             losePoints.textContent = result[i][8];
             row.appendChild(losePoints);
 
@@ -234,5 +251,14 @@ async function loadHistoryList() {
 
         historyTable.style.display = 'block';
         historyLoading.style.display = 'none';
+
+        historyList = new List('historyList', {
+            valueNames: ["time", "difficulty", "level", "name", "great", "good", "bad", "miss", "losePoints"],
+            page: 50,
+            pagination: {
+                paginationClass:'pagination',
+                outerWindow:1
+            }
+        });
     }
 }

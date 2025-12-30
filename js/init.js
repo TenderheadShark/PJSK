@@ -23,13 +23,14 @@ const historyLoading = document.getElementById("historyLoading");
 const historyNotFound = document.getElementById("historyNotFound");
 const historyTable = document.getElementById("historyTable");
 const historyTableBody = document.getElementById("historyTableBody");
+const historyPaginationList = document.getElementById("historyPaginationList");
 
 const statsTable = document.getElementById("statsTable");
 const statsTableBody = document.getElementById("statsTableBody");
 const statsLoading = document.getElementById("statsLoading");
 const statsButtons = document.getElementById("statsButtons");
 
-let userID = 1; //1:るん 2:あち
+let userID = 1;
 
 const baseURLforUser1 = 'https://script.google.com/macros/s/AKfycbwwuLHMVhXmxtpZQemgeZLRmNxG7aF2bNaN_bo2h4ywYUTH0fu-8w-26l0GVove3QHk/exec';
 const baseURLforUser2 = 'https://script.google.com/macros/s/AKfycbxMYaY3olK6cz8PY518yjXIu7gR8HVNNSHoAktOZDDlC2QB9wPKwuGUGvM2gdGhTI_WrQ/exec';
@@ -81,3 +82,5 @@ async function getData(action) {
     const result = await response.json();
     return result;
 }
+
+let historyList;
