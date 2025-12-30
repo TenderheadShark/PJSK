@@ -172,9 +172,9 @@ async function loadHistoryList() {
     historyNotFound.style.display = 'none';
     historyTable.style.display = 'none';
 
-            while (historyPaginationList.firstChild) {
-            historyPaginationList.removeChild(historyPaginationList.firstChild);
-        }
+    while (historyPaginationList.firstChild) {
+        historyPaginationList.removeChild(historyPaginationList.firstChild);
+    }
 
     const result = await getData('history');
 
@@ -252,8 +252,8 @@ async function loadHistoryList() {
             valueNames: ["timeStamp", "difficulty", "level", "name", "great", "good", "bad", "miss", "losePoints"],
             page: 50,
             pagination: {
-                paginationClass:'pagination',
-                outerWindow:1
+                paginationClass: 'pagination',
+                outerWindow: 1
             }
         });
     }

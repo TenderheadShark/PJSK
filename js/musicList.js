@@ -130,7 +130,7 @@ async function loadMusicList() {
         valueNames: ['id', 'default', 'type', 'name', 'ruby', 'unit', 'levelEasy', 'levelNormal', 'levelHard', 'levelExpert', 'levelMaster', 'levelAppend', 'time', 'bpm', 'clearEasy', 'clearNormal', 'clearHard', 'clearExpert', 'clearMaster', 'clearAppend'],
         sortFunction: customSort
     });
-    musicList.sort('default', {order: 'asc'});
+    musicList.sort('default', { order: 'asc' });
 }
 
 function clearChecker(string) {
