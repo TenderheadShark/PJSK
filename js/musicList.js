@@ -117,7 +117,7 @@ async function loadMusicList() {
         row.appendChild(clearAppend);
 
         const ruby = document.createElement('td');
-        ruby.textContent = musicListJSON[i].furigana;
+        ruby.textContent = musicListJSON[i].ruby;
         ruby.setAttribute("class", "ruby");
         row.appendChild(ruby);
 
