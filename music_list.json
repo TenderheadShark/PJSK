@@ -14143,5 +14143,28 @@
     "rubyComposer": "でぃゔぇら",
     "arrangement": "DIVELA",
     "rubyArrangement": "でぃゔぇら"
+  },
+  {
+    "id": 616,
+    "default": 13044,
+    "type": "既",
+    "name": "ヤンキーボーイ・ヤンキーガール",
+    "ruby": "やんきーぼーいやんきーがーる",
+    "url": "https://pjsekai.com/?2b5340ea10",
+    "unit": "3_VBS",
+    "easy": 6,
+    "normal": 13,
+    "hard": 18,
+    "expert": 25,
+    "master": 31,
+    "append": "",
+    "time": "2:02",
+    "bpm": 125,
+    "lyrics": "トーマ",
+    "rubyLyrics": "とーま",
+    "composer": "トーマ",
+    "rubyComposer": "とーま",
+    "arrangement": "トーマ",
+    "rubyArrangement": "とーま"
   }
 ]
