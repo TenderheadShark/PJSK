@@ -15,7 +15,7 @@
     "append": 25,
     "time": "2:03",
     "bpm": 150,
-    "lyrics": "けーぜっと",
+    "lyrics": "kz",
     "rubyLyrics": "けーぜっと",
     "composer": "kz",
     "rubyComposer": "けーぜっと",
@@ -5356,7 +5356,7 @@
     "composer": "EasyPop　",
     "rubyComposer": "いーじーぽっぷ",
     "arrangement": "EasyPop　",
-    "rubyArrangement": ""
+    "rubyArrangement": "いーじーぽっぷ"
   },
   {
     "id": 234,
@@ -6092,7 +6092,7 @@
     "composer": "まらしぃ",
     "rubyComposer": "まらしぃ",
     "arrangement": "KOUICHI",
-    "rubyArrangement": ""
+    "rubyArrangement": "こういち"
   },
   {
     "id": 266,
@@ -7564,7 +7564,7 @@
     "composer": "ナノウ",
     "rubyComposer": "なのう",
     "arrangement": "ナノウ",
-    "rubyArrangement": ""
+    "rubyArrangement": "なのう"
   },
   {
     "id": 330,
@@ -8275,7 +8275,7 @@
     "lyrics": "梅とら",
     "rubyLyrics": "うめとら",
     "composer": "梅とら",
-    "rubyComposer": "",
+    "rubyComposer": "うめとら",
     "arrangement": "",
     "rubyArrangement": ""
   },

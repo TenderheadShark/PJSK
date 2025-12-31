@@ -2,6 +2,7 @@ async function loadMusicList() {
     musicListLoading.style.display = 'block';
     musicListTable.style.display = 'none';
     searchBox.style.display = 'none';
+    searchBox.value = '';
 
     const result = await getData('list');
 
@@ -34,6 +35,21 @@ async function loadMusicList() {
         name.appendChild(nameText);
         name.setAttribute("class", "name");
         row.appendChild(name);
+
+        const lyrics = document.createElement('td');
+        lyrics.textContent = musicListJSON[i].lyrics;
+        lyrics.setAttribute('class', 'lyrics');
+        row.appendChild(lyrics);
+
+        const composer = document.createElement('td');
+        composer.textContent = musicListJSON[i].composer;
+        composer.setAttribute('class', 'composer');
+        row.appendChild(composer);
+
+        const arrangement = document.createElement('td');
+        arrangement.textContent = musicListJSON[i].arrangement;
+        arrangement.setAttribute('class', 'arrangement');
+        row.appendChild(arrangement);
 
         const unit = document.createElement('td');
         unit.textContent = musicListJSON[i].unit;
@@ -121,6 +137,21 @@ async function loadMusicList() {
         ruby.setAttribute("class", "ruby");
         row.appendChild(ruby);
 
+        const rubyLyrics = document.createElement('td');
+        rubyLyrics.textContent = musicListJSON[i].rubyLyrics;
+        rubyLyrics.setAttribute('class', 'rubyLyrics');
+        row.appendChild(rubyLyrics);
+
+        const rubyComposer = document.createElement('td');
+        rubyComposer.textContent = musicListJSON[i].rubyComposer;
+        rubyComposer.setAttribute('class', 'rubyComposer');
+        row.appendChild(rubyComposer);
+
+        const rubyArrangement = document.createElement('td');
+        rubyArrangement.textContent = musicListJSON[i].rubyArrangement;
+        rubyArrangement.setAttribute('class', 'rubyArrangement');
+        row.appendChild(rubyArrangement);
+
         musicListTableBody.appendChild(row);
     }
 
@@ -129,8 +160,9 @@ async function loadMusicList() {
     searchBox.style.display = 'block';
 
     musicList = new List('musicListScreen', {
-        valueNames: ['id', 'default', 'type', 'name', 'ruby', 'unit', 'levelEasy', 'levelNormal', 'levelHard', 'levelExpert', 'levelMaster', 'levelAppend', 'time', 'bpm', 'clearEasy', 'clearNormal', 'clearHard', 'clearExpert', 'clearMaster', 'clearAppend'],
-        sortFunction: customSort
+        valueNames: ['id', 'default', 'type', 'name', 'lyrics', 'composer', 'arrangement', 'unit', 'levelEasy', 'levelNormal', 'levelHard', 'levelExpert', 'levelMaster', 'levelAppend', 'time', 'bpm', 'clearEasy', 'clearNormal', 'clearHard', 'clearExpert', 'clearMaster', 'clearAppend', 'ruby', 'rubyLyrics', 'rubyComposer', 'rubyArrangement'],
+        sortFunction: customSort,
+        searchDelay: 250
     });
     musicList.sort('default', { order: 'asc' });
 }

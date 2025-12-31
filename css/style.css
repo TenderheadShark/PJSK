@@ -13,7 +13,7 @@
 #statsTable td {
     white-space: nowrap;
     border: 1px solid;
-    text-align: right;
+    text-align: center;
 }
 
 table tr:nth-child(odd) td {
@@ -30,10 +30,6 @@ table tr:nth-child(odd) td {
 
 table {
     border-collapse: collapse;
-}
-
-#musicListTable .name {
-    text-align: left;
 }
 
 .LC {
@@ -56,40 +52,20 @@ table {
     visibility: collapse;
 }
 
-#musicListTable .unit {
-    text-align: left;
-}
-
-#musicListTable .type {
-    text-align: center;
-}
-
 #musicListTable .levels th {
     width: 60px;
 }
 
-#musicListTable .clearEasy {
-    text-align: center;
+#musicListTable .name,
+#musicListTable .lyrics,
+#musicListTable .composer,
+#musicListTable .arrangement,
+#musicListTable .unit {
+    text-align: left;
 }
 
-#musicListTable .clearNormal {
-    text-align: center;
-}
-
-#musicListTable .clearHard {
-    text-align: center;
-}
-
-#musicListTable .clearExpert {
-    text-align: center;
-}
-
-#musicListTable .clearMaster {
-    text-align: center;
-}
-
-#musicListTable .clearAppend {
-    text-align: center;
+#musicListTable .id {
+    text-align: right;
 }
 
 .sort.desc:after {
@@ -100,16 +76,16 @@ table {
     content: "▲";
 }
 
-#historyTable .name {
-    text-align: left;
-}
-
+#historyTable .name,
 #historyTable .difficulty {
     text-align: left;
 }
 
 .ruby,
-.rubyHeader {
+.rubyHeader
+.rubyLyrics,
+.rubyComposer,
+.rubyArrangement {
     visibility: hidden;
     border: none !important;
 }
