@@ -14166,5 +14166,28 @@
     "rubyComposer": "とーま",
     "arrangement": "トーマ",
     "rubyArrangement": "とーま"
+  },
+  {
+    "id": 617,
+    "default": 12044,
+    "type": "既",
+    "name": "魔法少女とチョコレゐト",
+    "ruby": "まほうしょうじょとちょこれゐと",
+    "url": "https://pjsekai.com/?a43ea99356",
+    "unit": "2_MMJ",
+    "easy": 7,
+    "normal": 13,
+    "hard": 18,
+    "expert": 25,
+    "master": 30,
+    "append": "",
+    "time": "2:00",
+    "bpm": 150,
+    "lyrics": "ピノキオピー",
+    "rubyLyrics": "ぴのきおぴー",
+    "composer": "ピノキオピー",
+    "rubyComposer": "ぴのきおぴー",
+    "arrangement": "ピノキオピー",
+    "rubyArrangement": "ぴのきおぴー"
   }
 ]
