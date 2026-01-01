@@ -36,21 +36,6 @@ async function loadMusicList() {
         name.setAttribute("class", "name");
         row.appendChild(name);
 
-        const lyrics = document.createElement('td');
-        lyrics.textContent = musicListJSON[i].lyrics;
-        lyrics.setAttribute('class', 'lyrics');
-        row.appendChild(lyrics);
-
-        const composer = document.createElement('td');
-        composer.textContent = musicListJSON[i].composer;
-        composer.setAttribute('class', 'composer');
-        row.appendChild(composer);
-
-        const arrangement = document.createElement('td');
-        arrangement.textContent = musicListJSON[i].arrangement;
-        arrangement.setAttribute('class', 'arrangement');
-        row.appendChild(arrangement);
-
         const unit = document.createElement('td');
         unit.textContent = musicListJSON[i].unit;
         unit.setAttribute("class", "unit");
@@ -131,6 +116,21 @@ async function loadMusicList() {
         clearAppend.setAttribute("class", !clearChecker(result[i][7]) ? "black" : clearChecker(result[i][7]));
         clearAppend.classList.add("clearAppend");
         row.appendChild(clearAppend);
+
+        const lyrics = document.createElement('td');
+        lyrics.textContent = musicListJSON[i].lyrics;
+        lyrics.setAttribute('class', 'lyrics');
+        row.appendChild(lyrics);
+
+        const composer = document.createElement('td');
+        composer.textContent = musicListJSON[i].composer;
+        composer.setAttribute('class', 'composer');
+        row.appendChild(composer);
+
+        const arrangement = document.createElement('td');
+        arrangement.textContent = musicListJSON[i].arrangement;
+        arrangement.setAttribute('class', 'arrangement');
+        row.appendChild(arrangement);
 
         const ruby = document.createElement('td');
         ruby.textContent = musicListJSON[i].ruby;

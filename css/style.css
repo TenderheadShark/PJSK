@@ -9,11 +9,16 @@
 }
 
 #musicListTable td,
-#historyTable td,
-#statsTable td {
+#historyTable td {
     white-space: nowrap;
     border: 1px solid;
     text-align: center;
+}
+
+#statsTable td {
+    white-space: nowrap;
+    border: 1px solid;
+    text-align: right;
 }
 
 table tr:nth-child(odd) td {
