@@ -32,6 +32,9 @@ async function loadMusicList() {
         const nameText = document.createElement('a');
         nameText.textContent = musicListJSON[i].name;
         nameText.setAttribute('href', musicListJSON[i].url);
+        nameText.setAttribute('target', '_blank');
+        nameText.setAttribute('rel', 'noopener noreferrer');
+
         name.appendChild(nameText);
         name.setAttribute("class", "name");
         row.appendChild(name);
