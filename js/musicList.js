@@ -163,7 +163,7 @@ async function loadMusicList() {
     searchBox.style.display = 'block';
 
     musicList = new List('musicListScreen', {
-        valueNames: ['id', 'default', 'type', 'name', 'lyrics', 'composer', 'arrangement', 'unit', 'levelEasy', 'levelNormal', 'levelHard', 'levelExpert', 'levelMaster', 'levelAppend', 'time', 'bpm', 'clearEasy', 'clearNormal', 'clearHard', 'clearExpert', 'clearMaster', 'clearAppend', 'ruby', 'rubyLyrics', 'rubyComposer', 'rubyArrangement'],
+        valueNames: ['id', 'default', 'type', 'name', 'unit', 'levelEasy', 'levelNormal', 'levelHard', 'levelExpert', 'levelMaster', 'levelAppend', 'time', 'bpm', 'clearEasy', 'clearNormal', 'clearHard', 'clearExpert', 'clearMaster', 'clearAppend', 'lyrics', 'composer', 'arrangement', 'ruby', 'rubyLyrics', 'rubyComposer', 'rubyArrangement'],
         sortFunction: customSort,
         searchDelay: 250
     });
