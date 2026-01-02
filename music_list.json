@@ -1510,12 +1510,12 @@
     "append": "",
     "time": "2:04",
     "bpm": 154,
-    "lyrics": "黒うさ",
-    "rubyLyrics": "くろうさ",
-    "composer": "黒うさ",
-    "rubyComposer": "くろうさ",
-    "arrangement": "黒うさ",
-    "rubyArrangement": "くろうさ"
+    "lyrics": "黒うさP",
+    "rubyLyrics": "くろうさぴー",
+    "composer": "黒うさP",
+    "rubyComposer": "くろうさぴー",
+    "arrangement": "黒うさP",
+    "rubyArrangement": "くろうさぴー"
   },
   {
     "id": 67,
@@ -5834,12 +5834,12 @@
     "append": "",
     "time": "2:06",
     "bpm": 144,
-    "lyrics": "黒うさ",
-    "rubyLyrics": "くろうさ",
-    "composer": "黒うさ",
-    "rubyComposer": "くろうさ",
-    "arrangement": "黒うさ",
-    "rubyArrangement": "くろうさ"
+    "lyrics": "黒うさP",
+    "rubyLyrics": "くろうさぴー",
+    "composer": "黒うさP",
+    "rubyComposer": "くろうさぴー",
+    "arrangement": "黒うさP",
+    "rubyArrangement": "くろうさぴー"
   },
   {
     "id": 255,
@@ -14189,5 +14189,28 @@
     "rubyComposer": "ぴのきおぴー",
     "arrangement": "ピノキオピー",
     "rubyArrangement": "ぴのきおぴー"
+  },
+  {
+    "id": 618,
+    "default": 10221,
+    "type": "既",
+    "name": "上弦の月",
+    "ruby": "じょうげんのつき",
+    "url": "https://pjsekai.com/?39df3a2c8d",
+    "unit": "0_VS",
+    "easy": 5,
+    "normal": 10,
+    "hard": 17,
+    "expert": 24,
+    "master": 28,
+    "append": "",
+    "time": "2:12",
+    "bpm": 82,
+    "lyrics": "黒うさP",
+    "rubyLyrics": "くろうさぴー",
+    "composer": "黒うさP",
+    "rubyComposer": "くろうさぴー",
+    "arrangement": "",
+    "rubyArrangement": ""
   }
 ]
