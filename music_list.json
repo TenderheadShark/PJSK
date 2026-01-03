@@ -14212,5 +14212,28 @@
     "rubyComposer": "くろうさぴー",
     "arrangement": "",
     "rubyArrangement": ""
+  },
+  {
+    "id": 619,
+    "default": 14045,
+    "type": "既",
+    "name": "惑星ループ",
+    "ruby": "わくせいるーぷ",
+    "url": "https://pjsekai.com/?c45324eac7",
+    "unit": "4_WxS",
+    "easy": 7,
+    "normal": 12,
+    "hard": 18,
+    "expert": 24,
+    "master": 29,
+    "append": 28,
+    "time": "2:07",
+    "bpm": 170,
+    "lyrics": "ナユタン星人",
+    "rubyLyrics": "なゆたんせいじん",
+    "composer": "ナユタン星人",
+    "rubyComposer": "なゆたんせいじん",
+    "arrangement": "ナユタン星人",
+    "rubyArrangement": "なゆたんせいじん"
   }
 ]
