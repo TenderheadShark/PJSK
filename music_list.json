@@ -14235,5 +14235,28 @@
     "rubyComposer": "なゆたんせいじん",
     "arrangement": "ナユタン星人",
     "rubyArrangement": "なゆたんせいじん"
+  },
+  {
+    "id": 620,
+    "default": 10222,
+    "type": "既",
+    "name": "黒塗り世界宛て書簡",
+    "ruby": "くろぬりせかいあてしょかん",
+    "url": "https://pjsekai.com/?8e63d0634f",
+    "unit": "0_VS",
+    "easy": 8,
+    "normal": 12,
+    "hard": 19,
+    "expert": 26,
+    "master": 31,
+    "append": "",
+    "time": "2:10",
+    "bpm": 185,
+    "lyrics": "フロクロ",
+    "rubyLyrics": "ふろくろ",
+    "composer": "フロクロ",
+    "rubyComposer": "ふろくろ",
+    "arrangement": "フロクロ",
+    "rubyArrangement": "ふろくろ"
   }
 ]
