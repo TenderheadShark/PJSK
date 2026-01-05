@@ -14258,5 +14258,28 @@
     "rubyComposer": "ふろくろ",
     "arrangement": "フロクロ",
     "rubyArrangement": "ふろくろ"
+  },
+  {
+    "id": 621,
+    "default": 11044,
+    "type": "既",
+    "name": "君が飛び降りるのならば",
+    "ruby": "きみがとびおりるのならば",
+    "url": "https://pjsekai.com/?a76e108ebe",
+    "unit": "1_L/n",
+    "easy": 9,
+    "normal": 14,
+    "hard": 17,
+    "expert": 27,
+    "master": 30,
+    "append": "",
+    "time": "2:02",
+    "bpm": 210,
+    "lyrics": "Sakurai",
+    "rubyLyrics": "さくらい",
+    "composer": "Omoi",
+    "rubyComposer": "おもい",
+    "arrangement": "Omoi",
+    "rubyArrangement": "おもい"
   }
 ]
