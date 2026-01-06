@@ -14281,5 +14281,28 @@
     "rubyComposer": "おもい",
     "arrangement": "Omoi",
     "rubyArrangement": "おもい"
+  },
+  {
+    "id": 622,
+    "default": 15044,
+    "type": "既",
+    "name": "鎖の少女-Re Alive-",
+    "ruby": "くさりのしょうじょりあらいぶ",
+    "url": "https://pjsekai.com/?bb233fc0ce",
+    "unit": "5_25",
+    "easy": 6,
+    "normal": 13,
+    "hard": 17,
+    "expert": 24,
+    "master": 29,
+    "append": "",
+    "time": "2:13",
+    "bpm": 100,
+    "lyrics": "のぼる↑",
+    "rubyLyrics": "のぼる",
+    "composer": "のぼる↑",
+    "rubyComposer": "のぼる",
+    "arrangement": "のぼる↑",
+    "rubyArrangement": "のぼる"
   }
 ]
