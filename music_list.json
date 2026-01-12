@@ -14304,5 +14304,28 @@
     "rubyComposer": "のぼる",
     "arrangement": "のぼる↑",
     "rubyArrangement": "のぼる"
+  },
+  {
+    "id": 623,
+    "default": 10223,
+    "type": "公",
+    "name": "Internet Junk Jinkie",
+    "ruby": "いんたーねっとじゃんくじんきー",
+    "url": "https://pjsekai.com/?9cb92909bf",
+    "unit": "0_VS",
+    "easy": 9,
+    "normal": 14,
+    "hard": 20,
+    "expert": 28,
+    "master": 33,
+    "append": "",
+    "time": "2:04",
+    "bpm": 205,
+    "lyrics": "Capchii",
+    "rubyLyrics": "かぷちー",
+    "composer": "Capchii",
+    "rubyComposer": "かぷちー",
+    "arrangement": "Capchii",
+    "rubyArrangement": "かぷちー"
   }
 ]
