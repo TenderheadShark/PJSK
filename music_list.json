@@ -14327,5 +14327,28 @@
     "rubyComposer": "かぷちー",
     "arrangement": "Capchii",
     "rubyArrangement": "かぷちー"
+  },
+  {
+    "id": 624,
+    "default": 25028,
+    "type": "書",
+    "name": "幸福刑",
+    "ruby": "こうふくけい",
+    "url": "https://pjsekai.com/?bb874f3eab",
+    "unit": "5_25",
+    "easy": 6,
+    "normal": 12,
+    "hard": 17,
+    "expert": 23,
+    "master": 28,
+    "append": "",
+    "time": "2:00",
+    "bpm": 140,
+    "lyrics": "LonePi",
+    "rubyLyrics": "ろねぴ",
+    "composer": "LonePi",
+    "rubyComposer": "ろねぴ",
+    "arrangement": "LonePi",
+    "rubyArrangement": "ろねぴ"
   }
 ]
