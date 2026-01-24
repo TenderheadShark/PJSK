@@ -14350,5 +14350,28 @@
     "rubyComposer": "ろねぴ",
     "arrangement": "LonePi",
     "rubyArrangement": "ろねぴ"
-  }
+  },
+    {
+    "id": 625,
+    "default": 23027,
+    "type": "書",
+    "name": "透過する温度",
+    "ruby": "とうかするおんど",
+    "url": "https://pjsekai.com/?687d243020",
+    "unit": "3_VBS",
+    "easy": 5,
+    "normal": 13,
+    "hard": 17,
+    "expert": 24,
+    "master": 29,
+    "append": "",
+    "time": "1:52",
+    "bpm": 100,
+    "lyrics": "ササノマリイ",
+    "rubyLyrics": "ささのまりい",
+    "composer": "ササノマリイ",
+    "rubyComposer": "ささのまりい",
+    "arrangement": "ササノマリイ",
+    "rubyArrangement": "ささのまりい"
+    }
 ]
