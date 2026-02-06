@@ -14351,7 +14351,7 @@
     "arrangement": "LonePi",
     "rubyArrangement": "ろねぴ"
   },
-    {
+  {
     "id": 625,
     "default": 23027,
     "type": "書",
@@ -14373,8 +14373,8 @@
     "rubyComposer": "ささのまりい",
     "arrangement": "ササノマリイ",
     "rubyArrangement": "ささのまりい"
-    },
-    {
+  },
+  {
     "id": 626,
     "default": 10224,
     "type": "既",
@@ -14396,8 +14396,8 @@
     "rubyComposer": "みっちーえむ",
     "arrangement": "Mitchie M",
     "rubyArrangement": "みっちーえむ"
-    },
-    {
+  },
+  {
     "id": 627,
     "default": 10225,
     "type": "既",
@@ -14419,8 +14419,8 @@
     "rubyComposer": "よんじゅうめーとるぴー",
     "arrangement": "40mP",
     "rubyArrangement": "よんじゅうめーとるぴー"
-    },
-    {
+  },
+  {
     "id": 628,
     "default": 10226,
     "type": "既",
@@ -14442,8 +14442,8 @@
     "rubyComposer": "どりこ",
     "arrangement": "doriko",
     "rubyArrangement": "どりこ"
-    },
-    {
+  },
+  {
     "id": 629,
     "default": 10227,
     "type": "既",
@@ -14465,8 +14465,8 @@
     "rubyComposer": "おれんじすたー",
     "arrangement": "n-buna",
     "rubyArrangement": "なぶな"
-    },
-    {
+  },
+  {
     "id": 630,
     "default": 10228,
     "type": "既",
@@ -14488,8 +14488,8 @@
     "rubyComposer": "とことこ",
     "arrangement": "TOKOTOKO",
     "rubyArrangement": "とことこ"
-    },
-    {
+  },
+  {
     "id": 631,
     "default": 10229,
     "type": "既",
@@ -14511,8 +14511,8 @@
     "rubyComposer": "でこにーな",
     "arrangement": "Rockwell",
     "rubyArrangement": "ろっくうぇる"
-    },
-    {
+  },
+  {
     "id": 632,
     "default": 10230,
     "type": "既",
@@ -14534,5 +14534,5 @@
     "rubyComposer": "はるまきごはん",
     "arrangement": "はるまきごはん",
     "rubyArrangement": "はるまきごはん"
-    }
+  }
 ]
