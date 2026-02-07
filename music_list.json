@@ -14534,5 +14534,28 @@
     "rubyComposer": "はるまきごはん",
     "arrangement": "はるまきごはん",
     "rubyArrangement": "はるまきごはん"
+  },
+  {
+    "id": 633,
+    "default": 10231,
+    "type": "既",
+    "name": "Fondant Step",
+    "ruby": "ふぉんだんすてっぷ",
+    "url": "https://pjsekai.com/?bc8fc89c72",
+    "unit": "0_VS",
+    "easy": 6,
+    "normal": 12,
+    "hard": 16,
+    "expert": 23,
+    "master": 26,
+    "append": "",
+    "time": "2:09",
+    "bpm": 141,
+    "lyrics": "Heavenz",
+    "rubyLyrics": "へぶんず",
+    "composer": "Heavenz",
+    "rubyComposer": "へぶんず",
+    "arrangement": "Heavenz",
+    "rubyArrangement": "へぶんず"
   }
 ]
