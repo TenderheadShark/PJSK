@@ -14557,5 +14557,28 @@
     "rubyComposer": "へぶんず",
     "arrangement": "Heavenz",
     "rubyArrangement": "へぶんず"
+  },
+  {
+    "id": 634,
+    "default": 10232,
+    "type": "既",
+    "name": "SHIAWASE FOR YOU!",
+    "ruby": "しあわせふぉーゆー",
+    "url": "https://pjsekai.com/?9cd2fe5ab4",
+    "unit": "0_VS",
+    "easy": 8,
+    "normal": 13,
+    "hard": 19,
+    "expert": 25,
+    "master": 30,
+    "append": "",
+    "time": "1:44",
+    "bpm": 200,
+    "lyrics": "いよわ",
+    "rubyLyrics": "いよわ",
+    "composer": "いよわ",
+    "rubyComposer": "いよわ",
+    "arrangement": "いよわ",
+    "rubyArrangement": "いよわ"
   }
 ]
