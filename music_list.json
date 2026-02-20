@@ -14695,5 +14695,28 @@
     "rubyComposer": "はやしけい",
     "arrangement": "ハヤシケイ",
     "rubyArrangement": "はやしけい"
+  },
+  {
+    "id": 640,
+    "default": 24026,
+    "type": "書",
+    "name": "とびだせ！わんだぴょい",
+    "ruby": "とびだせわんだぴょい",
+    "url": "https://pjsekai.com/?9f081695f2",
+    "unit": "4_WxS",
+    "easy": 6,
+    "normal": 13,
+    "hard": 17,
+    "expert": 24,
+    "master": 29,
+    "append": "",
+    "time": "2:03",
+    "bpm": 140,
+    "lyrics": "なみぐる",
+    "rubyLyrics": "なみぐる",
+    "composer": "なみぐる",
+    "rubyComposer": "なみぐる",
+    "arrangement": "なみぐる",
+    "rubyArrangement": "なみぐる"
   }
 ]
